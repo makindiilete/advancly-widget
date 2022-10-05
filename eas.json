@@ -1,0 +1,37 @@
+{
+  "cli": {
+    "version": ">= 2.0.0"
+  },
+  "build": {
+    "production": {
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "development": {
+      "extends": "production",
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "master": {
+      "extends": "production",
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "NODE_ENV": "master"
+      }
+    },
+    "staging": {
+      "extends": "production",
+      "env": {
+        "NODE_ENV": "staging"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
